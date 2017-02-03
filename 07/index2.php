@@ -2,9 +2,20 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>データ登録</title>
+  <title>書籍情報入力画面</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <style>div{padding: 10px;font-size:16px;}</style>
+  <style>
+      div{
+          padding: 10px;font-size:16px;
+      }
+      .jumbotron{
+          padding-left: 80px;
+      }
+      .go{
+          padding-left: 80px;
+      }
+      
+  </style>
 </head>
 <body>
 
@@ -12,7 +23,7 @@
 <header>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
-    <div class="navbar-header"><a class="navbar-brand" href="select.php">データ一覧</a></div>
+    <div class="navbar-header"><a class="navbar-brand" href="select.php">書籍情報入力画面</a></div>
     </div>
   </nav>
 </header>
@@ -23,13 +34,15 @@
   <div class="jumbotron">
    <fieldset>
     <legend>フリーアンケート</legend>
-     <label>書籍名：<input type="text" name="book_name"></label><br>
+     <label>書籍名　：<input type="text" name="book_name"></label><br>
      <label>書籍URL：<input type="text" name="book_url"></label><br>
-     <label><textArea name="book_comm" rows="4" cols="40"></textArea></label><br>
+     <label>コメント：<textArea name="book_comm" rows="4" cols="40"></textArea></label><br>
      <input type="submit" value="送信">
     </fieldset>
   </div>
-<a href="submit.php?city=1">データ</a>
+  <div class="go">
+    <a href="http://localhost/sample07/select2.php">データ閲覧</a>
+  </div>
 </form>
 <!-- Main[End] -->
 

@@ -22,7 +22,7 @@ if($status==false){
   //$view .= $view.$res..と同じ意味 データを加えていく(.=)
   //$view .= $res["id"].$res["name"].$res["email"];
   while( $res = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $view .= '<p>'.$res["book_name"]."**".$res["book_url"].'</p>';
+    $view .= '<p>'."書籍名：".$res["book_name"]."<br>"."url：".$res["book_url"]."<br>"."コメント：".$res["book_comm"]."<br>".'</p>';
   }
 
 }
@@ -35,10 +35,24 @@ if($status==false){
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>フリーアンケート表示</title>
+<title>登録書籍情報</title>
 <link rel="stylesheet" href="css/range.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<style>div{padding: 10px;font-size:16px;}</style>
+<style>
+    div{
+        padding: 10px;
+        font-size:16px;
+    }
+
+    .back{
+        padding-left: 80px;
+    }
+    
+    
+    
+
+
+</style>
 </head>
 <body id="main">
 <!-- Head[Start] -->
@@ -46,7 +60,7 @@ if($status==false){
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-      <a class="navbar-brand" href="index2.php">データ登録</a>
+      <a class="navbar-brand" href="index2.php">登録書籍情報</a>
       </div>
     </div>
   </nav>
@@ -56,6 +70,10 @@ if($status==false){
 <!-- Main[Start] -->
 <div>
     <div class="container jumbotron"><?=$view?></div>
+</div>
+
+<div class="back">
+<a href="http://localhost/sample07/index2.php">戻る</a>
 </div>
 <!-- Main[End] -->
 
